@@ -41,7 +41,8 @@ class App extends Component {
           onValueChange={this.handleChange}
         />
         <hr className="ml-5 mr-5" />
-        {this.state.toDoList.map((toDoList, index) => (
+        {this.state.toDoList.length === 0 ? <h4>Please add Items in the list</h4> : 
+        this.state.toDoList.map((toDoList, index) => (
           <ToDoList onRemove={() => this.removeElement(index)} toDoList={toDoList} id={index} />
         ))}
       </div>

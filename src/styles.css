@@ -9,6 +9,7 @@
 }
 .rightelement {
   text-align: right;
+  margin-left: 80% !important;
   right: 0;
 }
 .centerelement {

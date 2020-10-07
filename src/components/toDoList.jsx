@@ -21,15 +21,19 @@ class inputElement extends Component {
                 onClick={() => this.onCheck(this.props.id)}
               />
             </td>
-            <td id={this.props.id} className="center element pl-5 pr-2 m-2  ">
+            <td
+              id={this.props.id}
+              className=" text-center container centerelement pl-5 pr-2 m-2  "
+            >
               {this.props.toDoList}
             </td>
-            <td className="rightelement">
+
+            <td className="container-fluid rightelement">
               <button
                 onClick={this.props.onRemove}
-                className="rounded-circle btn-sm pl-2 pr-2 ml-5 btn btn-outline-danger"
+                className="rounded-pill btn btn-sm p-auto btn-outline-danger"
               >
-                x
+                Remove
               </button>
             </td>
           </tr>
