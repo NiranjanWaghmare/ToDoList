@@ -31,6 +31,11 @@ class App extends Component {
     toDoList.splice(index,1);
     this.setState({ toDoList });
   }
+handleReset=()=>{
+  const toDoList = this.state.toDoList
+  toDoList.splice(0,toDoList.length);
+  this.setState({ toDoList });
+}
    
   render() {
     return (
@@ -40,6 +45,7 @@ class App extends Component {
           onSubmit={this.handleSubmit}
           onValueChange={this.handleChange}
         />
+        <button onClick={this.handleReset} className="btn btn-sm btn-outline-warning">clear all</button>
         <hr className="ml-5 mr-5" />
         {this.state.toDoList.length === 0 ? <h4>Please add Items in the list</h4> : 
         this.state.toDoList.map((toDoList, index) => (
